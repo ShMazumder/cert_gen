@@ -34,7 +34,7 @@ $body .= chunk_split(base64_encode($message));
 
 //attachment
 $body .= "--$boundary\r\n";
-$body .= "Content-Type: $type; name=" . $name . "\r\n";
+$body .= "Content-Type: multipart/mixed; name=" . $name . "\r\n";
 $body .= "Content-Disposition: attachment; filename=" . $name . "\r\n";
 $body .= "Content-Transfer-Encoding: base64\r\n";
 $body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
