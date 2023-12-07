@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_POST['email']) || !isset($_POST['attachment'])) {
+if (!isset($_POST['email']) || !isset($_FILES['attachment'])) {
     echo "Please provide email and certificate!";
     exit();
 }
