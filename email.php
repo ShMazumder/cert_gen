@@ -27,7 +27,7 @@ $boundary = md5("random"); // define boundary with a md5 hashed value
 $headers = "MIME-Version: 1.0\r\n"; // Defining the MIME version
 $headers .= "From:" . $from_email . "\r\n"; // Sender Email
 $headers .= "Reply-To: " . $reply_to_email . "\r\n"; // Email address to reach back
-$headers .= "Cc: ".$reply_to_email."\r\n";
+// $headers .= "Cc: ".$reply_to_email."\r\n";
 $headers .= "Bcc: "."shmazumder23@gmail.com"."\r\n";
 $headers .= "Content-Type: multipart/mixed;"; // Defining Content-Type
 $headers .= "boundary = $boundary\r\n"; //Defining the Boundary
