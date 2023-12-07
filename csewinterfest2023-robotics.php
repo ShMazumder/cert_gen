@@ -242,8 +242,8 @@ error_reporting(E_ALL);
         // ];
 
         const data = [{
-            "Name": "Riad Rahman",
-            "Email": 'rahmanriad.cse@gmail.com',
+            "Name": "Shazzad Hossain Mazumder",
+            "Email": 'shmazumder23@gmail.com',
         }]
 
         let _width = 3627 / 3;
