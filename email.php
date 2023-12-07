@@ -18,7 +18,7 @@ $message     = $_POST["message"]; //body of the email
 $file_path = $_FILES['attachment']['tmp_name'];
 
 // $content = $_POST['attachment'];
-$content = base64_encode(file_get_contents($content));
+$content = base64_encode(file_get_contents($file_path));
 $encoded_content = chunk_split($content);
 
 $boundary = md5("random"); // define boundary with a md5 hashed value
