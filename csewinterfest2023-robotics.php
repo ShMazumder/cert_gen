@@ -337,27 +337,26 @@ error_reporting(E_ALL);
             doc.save("41-certificates-for-winterfest-robotics.pdf");
         }
 
-        function base64ToBlob(base64, mime) {
-            mime = mime || '';
+        function base64toBlob(base64Data, contentType) {
+            contentType = contentType || '';
             var sliceSize = 1024;
-            var byteChars = window.atob(base64);
-            var byteArrays = [];
+            var byteCharacters = atob(base64Data);
+            var bytesLength = byteCharacters.length;
+            var slicesCount = Math.ceil(bytesLength / sliceSize);
+            var byteArrays = new Array(slicesCount);
 
-            for (var offset = 0, len = byteChars.length; offset < len; offset += sliceSize) {
-                var slice = byteChars.slice(offset, offset + sliceSize);
+            for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+                var begin = sliceIndex * sliceSize;
+                var end = Math.min(begin + sliceSize, bytesLength);
 
-                var byteNumbers = new Array(slice.length);
-                for (var i = 0; i < slice.length; i++) {
-                    byteNumbers[i] = slice.charCodeAt(i);
+                var bytes = new Array(end - begin);
+                for (var offset = begin, i = 0; offset < end; ++i, ++offset) {
+                    bytes[i] = byteCharacters[offset].charCodeAt(0);
                 }
-
-                var byteArray = new Uint8Array(byteNumbers);
-
-                byteArrays.push(byteArray);
+                byteArrays[sliceIndex] = new Uint8Array(bytes);
             }
-
             return new Blob(byteArrays, {
-                type: mime
+                type: contentType
             });
         }
 
