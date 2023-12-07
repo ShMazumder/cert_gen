@@ -32,13 +32,22 @@ $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
 $body .= "Content-Transfer-Encoding: base64\r\n\r\n";
 $body .= chunk_split(base64_encode($message));
 
+// //attachment
+// $body .= "--$boundary\r\n";
+// $body .= "Content-Type: image/jpeg; name=" . "certificate.jpeg" . "\r\n";
+// $body .= "Content-Disposition: attachment; filename=" . "certificate.jpeg" . "\r\n";
+// $body .= "Content-Transfer-Encoding: base64\r\n";
+// $body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
+// $body .= $encoded_content; // Attaching the encoded file with email
+
 //attachment
 $body .= "--$boundary\r\n";
-$body .= "Content-Type: image/jpeg; name=" . "certificate.jpeg" . "\r\n";
-$body .= "Content-Disposition: attachment; filename=" . "certificate.jpeg" . "\r\n";
+$body .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
+$body .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n";
 $body .= "Content-Transfer-Encoding: base64\r\n";
 $body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
-$body .= $encoded_content; // Attaching the encoded file with email
+$body .= $attachment_content; // Attaching the encoded file with email
+
 
 $sentMailResult = mail($recipient_email, $subject, $body, $headers);
 
