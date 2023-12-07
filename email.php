@@ -48,7 +48,7 @@ $body .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n
 $body .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n";
 $body .= "Content-Transfer-Encoding: base64\r\n";
 $body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
-$body .= $attachment_content; // Attaching the encoded file with email
+$body .= $encoded_content; // Attaching the encoded file with email
 
 
 $sentMailResult = mail($recipient_email, $subject, $body, $headers);
