@@ -341,6 +341,8 @@ error_reporting(E_ALL);
             return new Promise((res, rej) => {
                 $.ajax({
                     url: 'email.php',
+                    cache: false,
+                    enctype: 'multipart/form-data',
                     data: {
                         email: email,
                         name: name,

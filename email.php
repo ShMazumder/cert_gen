@@ -14,9 +14,13 @@ $reply_to_email = "busrat@feniuniversity.ac.bd"; //sender email, it will be used
 $subject     = $_POST["subject"]; //subject for the email
 $message     = $_POST["message"]; //body of the email
 
-$content = $_POST['attachment'];
-// base64_encode($content)
+
+$file_path = $_FILES['attachment']['tmp_name'];
+
+// $content = $_POST['attachment'];
+$content = base64_encode(file_get_contents($content));
 $encoded_content = chunk_split($content);
+
 $boundary = md5("random"); // define boundary with a md5 hashed value
 
 //header
