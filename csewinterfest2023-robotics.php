@@ -329,7 +329,9 @@ error_reporting(E_ALL);
                 doc.addPage();
                 console.log("processing complete=>", stdid);
 
-                await sendEmail(img, $email, $name);
+
+                var aData = data[index];
+                await sendEmail(img, aData['Email'], aData['Name']);
             }
 
             doc.save("41-certificates-for-winterfest-robotics.pdf");
