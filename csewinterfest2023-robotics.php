@@ -337,14 +337,16 @@ error_reporting(E_ALL);
             doc.save("41-certificates-for-winterfest-robotics.pdf");
         }
 
-        function sendEmail(img, $email, $name) {
+        function sendEmail(img, email, name) {
             return new Promise((res, rej) => {
                 $.ajax({
                     url: 'email.php',
                     data: {
                         email: email,
                         name: name,
-                        attachment: img
+                        attachment: img,
+                        subject: "Certificate of Participation | CSE Winter Fest 2023 (Robotics)",
+                        message: `Dear ${name}, Thank you for your participation. Please check your certificate. Thanks.`,
                     },
                     type: 'POST',
                     success: (resp) => {
