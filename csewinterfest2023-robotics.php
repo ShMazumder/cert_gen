@@ -370,7 +370,7 @@ error_reporting(E_ALL);
             formData.append('email', email, );
             formData.append('name', name, );
             formData.append('subject', "Certificate of Participation | CSE Winter Fest 2023 (Robotics)", );
-            formData.append('message', `Dear ${name},<br/>We appreciate your contribution to the program. Please check your certificate.<br/>Thanks.`, );
+            formData.append('message', `Dear ${name},\nWe appreciate your contribution to the program. Please check your certificate.\nThanks.`, );
             formData.append('attachment', blob);
 
             return new Promise((res, rej) => {
