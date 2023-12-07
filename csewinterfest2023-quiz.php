@@ -65,9 +65,13 @@ error_reporting(E_ALL);
 
 <body>
 
-    <button onclick="downloadTranscripts()">Download</button>
+    <button onclick="downloadTranscripts()">Generate and Send Certificate</button>
     <div id="process"></div>
     <div class="container">
+
+    </div>
+
+    <div class="emailforms">
 
     </div>
     <script>
@@ -237,6 +241,11 @@ error_reporting(E_ALL);
             }
         ];
 
+        // const data = [{
+        //     "Name": "Shazzad Hossain Mazumder",
+        //     "Email": 'shmazumder23@gmail.com',
+        // }]
+
         let _width = 3627 / 3;
         let _height = 2600 / 3;
 
@@ -319,9 +328,69 @@ error_reporting(E_ALL);
                 doc.addImage(img, "JPEG", marginX, marginY, canvasWidth, canvasHeight);
                 doc.addPage();
                 console.log("processing complete=>", stdid);
+
+
+                var aData = data[index];
+                await sendEmail(img, aData['Email'], aData['Name']);
             }
 
-            doc.save("32-certificates-for-convocation-decipline-committee.pdf");
+            doc.save("41-certificates-for-winterfest-robotics.pdf");
+        }
+
+        function base64toBlob(base64Data, contentType) {
+            contentType = contentType || '';
+            var sliceSize = 1024;
+            var byteCharacters = atob(base64Data);
+            var bytesLength = byteCharacters.length;
+            var slicesCount = Math.ceil(bytesLength / sliceSize);
+            var byteArrays = new Array(slicesCount);
+
+            for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+                var begin = sliceIndex * sliceSize;
+                var end = Math.min(begin + sliceSize, bytesLength);
+
+                var bytes = new Array(end - begin);
+                for (var offset = begin, i = 0; offset < end; ++i, ++offset) {
+                    bytes[i] = byteCharacters[offset].charCodeAt(0);
+                }
+                byteArrays[sliceIndex] = new Uint8Array(bytes);
+            }
+            return new Blob(byteArrays, {
+                type: contentType
+            });
+        }
+
+        function sendEmail(img, email, name) {
+
+            // console.log(img);
+
+            var base64ImageContent = img.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
+            var blob = base64toBlob(base64ImageContent, 'image/png');
+            var formData = new FormData();
+            formData.append('email', email, );
+            formData.append('name', name, );
+            formData.append('subject', "Certificate of Participation | CSE Winter Fest 2023 (Robotics)", );
+            formData.append('message', `Dear ${name},\nWe appreciate your contribution to the program. Please check your certificate.\nThanks.`, );
+            formData.append('attachment', blob);
+
+            return new Promise((res, rej) => {
+                $.ajax({
+                    url: 'email.php',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    type: 'POST',
+                    success: (resp) => {
+                        resp = JSON.parse(resp);
+
+                        if (!resp.error) {
+                            res();
+                        }
+                    }
+                });
+
+            })
         }
     </script>
 </body>
