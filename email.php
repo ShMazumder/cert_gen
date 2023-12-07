@@ -41,6 +41,8 @@ $body .= chunk_split(base64_encode($message));
 // $body .= $encoded_content; // Attaching the encoded file with email
 
 //attachment
+
+$filename = "certificate.jpeg";
 $body .= "--$boundary\r\n";
 $body .= "Content-Type: application/octet-stream; name=\"" . $filename . "\"\r\n";
 $body .= "Content-Disposition: attachment; filename=\"" . $filename . "\"\r\n";
