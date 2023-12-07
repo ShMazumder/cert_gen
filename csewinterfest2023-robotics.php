@@ -65,7 +65,7 @@ error_reporting(E_ALL);
 
 <body>
 
-    <button onclick="downloadTranscripts()">Download</button>
+    <button onclick="downloadTranscripts()">Generate and Send Certificate</button>
     <div id="process"></div>
     <div class="container">
 
