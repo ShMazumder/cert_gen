@@ -362,7 +362,7 @@ error_reporting(E_ALL);
 
         function sendEmail(img, email, name) {
 
-            console.log(img);
+            // console.log(img);
 
             var base64ImageContent = img.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
             var blob = base64toBlob(base64ImageContent, 'image/png');
