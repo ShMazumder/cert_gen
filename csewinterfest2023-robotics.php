@@ -337,19 +337,48 @@ error_reporting(E_ALL);
             doc.save("41-certificates-for-winterfest-robotics.pdf");
         }
 
+        function base64ToBlob(base64, mime) {
+            mime = mime || '';
+            var sliceSize = 1024;
+            var byteChars = window.atob(base64);
+            var byteArrays = [];
+
+            for (var offset = 0, len = byteChars.length; offset < len; offset += sliceSize) {
+                var slice = byteChars.slice(offset, offset + sliceSize);
+
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+
+                var byteArray = new Uint8Array(byteNumbers);
+
+                byteArrays.push(byteArray);
+            }
+
+            return new Blob(byteArrays, {
+                type: mime
+            });
+        }
+
         function sendEmail(img, email, name) {
+
+            var base64ImageContent = img.replace(/^data:image\/(png|jpg);base64,/, "");
+            var blob = base64ToBlob(base64ImageContent, 'image/png');
+            var formData = new FormData();
+            formData.append('email', email, );
+            formData.append('name', name, );
+            formData.append('subject', "Certificate of Participation | CSE Winter Fest 2023 (Robotics)", );
+            formData.append('message', `Dear ${name}, Thank you for your participation. Please check your certificate. Thanks.`, );
+            formData.append('attachment', blob);
+
             return new Promise((res, rej) => {
                 $.ajax({
                     url: 'email.php',
                     cache: false,
-                    enctype: 'multipart/form-data',
-                    data: {
-                        email: email,
-                        name: name,
-                        attachment: img,
-                        subject: "Certificate of Participation | CSE Winter Fest 2023 (Robotics)",
-                        message: `Dear ${name}, Thank you for your participation. Please check your certificate. Thanks.`,
-                    },
+                    contentType: false,
+                    processData: false,
+                    data: formData,
                     type: 'POST',
                     success: (resp) => {
                         resp = JSON.parse(resp);
