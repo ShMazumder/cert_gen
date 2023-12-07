@@ -364,7 +364,7 @@ error_reporting(E_ALL);
 
             console.log(img);
 
-            var base64ImageContent = img.replace(/^data:image\/(png|jpg);base64,/, "");
+            var base64ImageContent = img.replace(/^data:image\/(png|jpg|jpeg);base64,/, "");
             var blob = base64toBlob(base64ImageContent, 'image/png');
             var formData = new FormData();
             formData.append('email', email, );
