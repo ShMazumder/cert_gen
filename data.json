@@ -1,0 +1,290 @@
+[
+  {
+    "S.L": "1",
+    "Name": "Azizul Hakim",
+    "ID": "201011025",
+    "Batch": "21",
+    "Mobile": "01875721332",
+    "T-S": "XL",
+    "Dept.": "BBA"
+  },
+  {
+    "S.L": "2",
+    "Name": "Minhazul Islam",
+    "ID": "212011002",
+    "Batch": "25",
+    "Mobile": "01822069436",
+    "T-S": "XL",
+    "Dept.": "BBA"
+  },
+  {
+    "S.L": "3",
+    "Name": "Md. Siam Sajid",
+    "ID": "213011008",
+    "Batch": "26",
+    "Mobile": "01963392068",
+    "T-S": "XL",
+    "Dept.": "BBA"
+  },
+  {
+    "S.L": "4",
+    "Name": "Puja Rani Das",
+    "ID": "221011006",
+    "Batch": "27",
+    "Mobile": "01839771933",
+    "T-S": "XL",
+    "Dept.": "BBA"
+  },
+  {
+    "S.L": "5",
+    "Name": "Wazid Al Ruhan",
+    "ID": "221011015",
+    "Batch": "27",
+    "Mobile": "01690189012",
+    "T-S": "XL",
+    "Dept.": "BBA"
+  },
+  {
+    "S.L": "6",
+    "Name": "Imtiaz Uddin",
+    "ID": "201021001",
+    "Batch": "21",
+    "Mobile": "01856037101",
+    "T-S": "XL",
+    "Dept.": "CE"
+  },
+  {
+    "S.L": "7",
+    "Name": "Adnan Sharif Mahmud",
+    "ID": "201021005",
+    "Batch": "21",
+    "Mobile": "01631084570",
+    "T-S": "XL",
+    "Dept.": "CE"
+  },
+  {
+    "S.L": "9",
+    "Name": "Abdullah Al Adnan Mozumder",
+    "ID": "232021003",
+    "Batch": "31",
+    "Mobile": "01859081848",
+    "T-S": "M",
+    "Dept.": "CE"
+  },
+  {
+    "S.L": "10",
+    "Name": "Sania e Zahan",
+    "ID": "223022001",
+    "Batch": "29 DH",
+    "Mobile": "01890155061",
+    "T-S": "XL",
+    "Dept.": "CE"
+  },
+  {
+    "S.L": "11",
+    "Name": "Abul Hasnat Asif",
+    "ID": "212031002",
+    "Batch": "25",
+    "Mobile": "01839310774",
+    "T-S": "XL",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "12",
+    "Name": "Sabrina Tabassum",
+    "ID": "212031006",
+    "Batch": "25",
+    "Mobile": "01980013714",
+    "T-S": "L",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "13",
+    "Name": "Iftekhar Bin Mohiuddin",
+    "ID": "213032003",
+    "Batch": "26",
+    "Mobile": "01827295460",
+    "T-S": "XXL",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "14",
+    "Name": "Tanvir Hossain Raj",
+    "ID": "221031004",
+    "Batch": "27",
+    "Mobile": "01875890181",
+    "T-S": "XL",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "15",
+    "Name": "Ifti Nowal Chowdhury",
+    "ID": "222031002",
+    "Batch": "28",
+    "Mobile": "01628058269",
+    "T-S": "XL",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "16",
+    "Name": "Tariqul Islam",
+    "ID": "213042005",
+    "Batch": "26",
+    "Mobile": "01820108676",
+    "T-S": "XL",
+    "Dept.": "EEE"
+  },
+  {
+    "S.L": "17",
+    "Name": "Azher Bin Hossain",
+    "ID": "221041001",
+    "Batch": "27",
+    "Mobile": "01321886003",
+    "T-S": "L",
+    "Dept.": "EEE"
+  },
+  {
+    "S.L": "18",
+    "Name": "Antor Kumar Nath",
+    "ID": "221041005",
+    "Batch": "27",
+    "Mobile": "01842764901",
+    "T-S": "L",
+    "Dept.": "EEE"
+  },
+  {
+    "S.L": "19",
+    "Name": "MD. Rubaiyat Hasan Rahin",
+    "ID": "231041004",
+    "Batch": "30",
+    "Mobile": "01632423477",
+    "T-S": "XL",
+    "Dept.": "EEE"
+  },
+  {
+    "S.L": "20",
+    "Name": "Md. Anowar Hossen",
+    "ID": "201051002",
+    "Batch": "21",
+    "Mobile": "01839737736",
+    "T-S": "XL",
+    "Dept.": "ENG"
+  },
+  {
+    "S.L": "21",
+    "Name": "Mehedi Hasan Tarek",
+    "ID": "201051014",
+    "Batch": "21",
+    "Mobile": "01631901761",
+    "T-S": "L",
+    "Dept.": "ENG"
+  },
+  {
+    "S.L": "22",
+    "Name": "Roksana Akter",
+    "ID": "222051008",
+    "Batch": "28",
+    "Mobile": "01746681726",
+    "T-S": "L",
+    "Dept.": "ENG"
+  },
+  {
+    "S.L": "23",
+    "Name": "Ruthan Mahmood",
+    "ID": "231051002",
+    "Batch": "30",
+    "Mobile": "01554322332",
+    "T-S": "L",
+    "Dept.": "ENG"
+  },
+  {
+    "S.L": "24",
+    "Name": "Imtiaz Mahmud Oni",
+    "ID": "231051012",
+    "Batch": "30",
+    "Mobile": "01610976770",
+    "T-S": "XL",
+    "Dept.": "ENG"
+  },
+  {
+    "S.L": "25",
+    "Name": "Nasrin Akter",
+    "ID": "193061023",
+    "Batch": "20",
+    "Mobile": "01814198389",
+    "T-S": "M",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "26",
+    "Name": "Rahatul Islam Rahat",
+    "ID": "211061001",
+    "Batch": "24",
+    "Mobile": "01886703209",
+    "T-S": "XL",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "27",
+    "Name": "Sadia Islam",
+    "ID": "212061001",
+    "Batch": "25",
+    "Mobile": "01873464660",
+    "T-S": "M",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "28",
+    "Name": "Soikat Hossen Sojib",
+    "ID": "212061004",
+    "Batch": "25",
+    "Mobile": "01813356721",
+    "T-S": "M",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "29",
+    "Name": "Rakib Ahmad Miazi",
+    "ID": "213061003",
+    "Batch": "26",
+    "Mobile": "01973473977",
+    "T-S": "XL",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "30",
+    "Name": "Mohammad Sabuj",
+    "ID": "231061026",
+    "Batch": "30",
+    "Mobile": "01884237206",
+    "T-S": "XL",
+    "Dept.": "LAW"
+  },
+  {
+    "S.L": "31",
+    "Name": "Farchina Akter Nadia",
+    "ID": "223031018",
+    "Batch": "29",
+    "Mobile": "01859258185",
+    "T-S": "",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "32",
+    "Name": "Mahfuzul Karim",
+    "ID": "201031009",
+    "Batch": "21",
+    "Mobile": "",
+    "T-S": "",
+    "Dept.": "CSE"
+  },
+  {
+    "S.L": "33",
+    "Name": "Kobita Akther",
+    "ID": "212061006",
+    "Batch": "25",
+    "Mobile": "",
+    "T-S": "",
+    "Dept.": "LAW"
+  }
+]
