@@ -37,6 +37,16 @@ error_reporting(E_ALL);
             text-transform: uppercase;
         } */
 
+        .position {
+            position: absolute;
+            top: 500px;
+            text-align: center;
+            width: calc(calc(3627px / 3) - 350px);
+            font-size: 56px;
+            font-weight: bold;
+            font-family: 'Beau Rivage', cursive;
+            /* font-family: 'Permanent Marker', cursive; */
+        }
 
         .desc {
             position: absolute;
@@ -77,167 +87,18 @@ error_reporting(E_ALL);
     <script>
         const data = [{
                 "Name": "Farzana Akter",
-                "Email": "sinthiyafarzana@gmail.com"
-            },
-            {
-                "Name": "Kazi Mohammad Abu Sayed",
-                "Email": "kazimohmmadabusayed@gmail.com"
-            },
-            {
-                "Name": "Kazi Md. Baha Uddin Faruqi",
-                "Email": "bahauddinfaruqi@gmail.com"
-            },
-            {
-                "Name": "Md. Mehedi Hasan",
-                "Email": "mahdihasan112358@gmail "
-            },
-            {
-                "Name": "MD Jahid Hossain ",
-                "Email": "jahid212522@gmail.com"
-            },
-            {
-                "Name": "Anisur Rahman Bhuiyan",
-                "Email": "anisur.ayaan@gmail.com"
-            },
-            {
-                "Name": "Tahsin Bin Harun Mazumder",
-                "Email": "shadidmazumder123@gmail.com"
-            },
-            {
-                "Name": "Abdullah Al Mamun Zishan ",
-                "Email": "zafarahmed01071969@gmail.com"
-            },
-            {
-                "Name": "Jyoti Mondal Yuthi ",
-                "Email": "Mondaljyoti594@gmail.com"
-            },
-            {
-                "Name": "Sabina Binth Belal",
-                "Email": "sabinatisha04@gmail.com"
-            },
-            {
-                "Name": "Faria Afrin Isha",
-                "Email": "fariaisha27@gmail.com"
-            },
-            {
-                "Name": "Taisin Nigar Tisha",
-                "Email": "nigartisha321.taisin@gmail.com"
-            },
-            {
-                "Name": "Tasmin Tamanna",
-                "Email": "tasminnisha128@gmail.com"
-            },
-            {
-                "Name": "Nadia Tanjum Jarin ",
-                "Email": "nadiatanjum1602@gmail.com"
-            },
-            {
-                "Name": "Nasrin Sultana Popy",
-                "Email": "nasrinpopy1234@gmail.com"
-            },
-            {
-                "Name": "Anindita Saha ",
-                "Email": "swarnafu28@gmail.com"
-            },
-            {
-                "Name": "Nusrat Jahan Prity",
-                "Email": "nusratprityprity@gmail.com"
-            },
-            {
-                "Name": "Aksa Mahmud ",
-                "Email": "aksamahmud7822@gmail.com"
-            },
-            {
-                "Name": "Sabrina Sultana",
-                "Email": "sabrinaprity898@gmail.com"
-            },
-            {
-                "Name": "Farjana Akter ",
-                "Email": "farjanasuborna644@gmail.com"
-            },
-            {
-                "Name": "Mobashara ",
-                "Email": "mobashara.fu.cse@gmail.com"
+                "Email": "sinthiyafarzana@gmail.com",
+                "Position": "3rd"
             },
             {
                 "Name": "Ishrat Jahan Ani",
-                "Email": "ishratjahan.anee2020@gmail.com "
+                "Email": "ishratjahan.anee2020@gmail.com ",
+                "Position": "2nd"
             },
             {
-                "Name": "Maliha Mahmuda",
-                "Email": "mahmudamaliha65@gmail "
-            },
-            {
-                "Name": "Sonya karmakar ",
-                "Email": "sonyakarmakar30@gmail.com"
-            },
-            {
-                "Name": "Sadia Tayeeba ",
-                "Email": "tayeebasadia@gmail.com"
-            },
-            {
-                "Name": "Sadia Akter",
-                "Email": "Sadiaripa24@gmail.com"
-            },
-            {
-                "Name": "Humayra Tanzila",
-                "Email": "humayratanzila556@gmail.com"
-            },
-            {
-                "Name": "MD. Kawsar Mahmud ",
-                "Email": "kawsarmahmud822@gmail.com"
-            },
-            {
-                "Name": "Seheria Akter",
-                "Email": "era.chowdhury3921@gmail.com"
-            },
-            {
-                "Name": "Robin deb nath ",
-                "Email": "robindevnath2210@gmail "
-            },
-            {
-                "Name": "Zahirul Islam",
-                "Email": "zahirulshahin190@gmail.com"
-            },
-            {
-                "Name": "Shahria Hossain",
-                "Email": "shahriahosseinushar@gmail.com"
-            },
-            {
-                "Name": "Izazur Rahman Ratib",
-                "Email": "mohammadisrak62@gmail.com"
-            },
-            {
-                "Name": "Md Abdul Al Noman",
-                "Email": "mdabdulalnoman07@gmail.com"
-            },
-            {
-                "Name": "Ikbal Hosen Raihan",
-                "Email": "ikbalraihan18@gmail.com"
-            },
-            {
-                "Name": "Madhubi Rani Sutro Dhor",
-                "Email": "pnodeskumar85@gmail.com"
-            },
-            {
-                "Name": "MAHFUZUR RAHMAN",
-                "Email": "myselfmahin77@gmail.com"
-            },
-            {
-                "Name": "Md Mahedi Hasan Noyon",
-                "Email": "mmd033744@gmail "
-            },
-            {
-                "Name": "Fariya Sultana ",
-                "Email": "fariyasultana9928@gmail.com"
-            },
-            {
-                "Name": "Durjoy datta",
-                "Email": "durjaydatta5@gmail.com"
-            },
-            {
-                "Name": "Towhid Al Rabe",
-                "Email": "alrabitowhid@gmail.com"
+                "Name": "Hasan Imran Nazir",
+                "Email": "hin26@outlook.com",
+                "Position": "1st"
             }
         ];
 
@@ -254,13 +115,17 @@ error_reporting(E_ALL);
             $(data).each(function(i, elm) {
                 // let i = 0;
 
+                let position = (data[i]['Position']);
+                let position_intpart = parseInt(position);
+                let position_postfix = (position).replace(position_intpart, "");
+
                 let email = (data[i]['Email']);
 
 
                 var img = `<div id='id_${(email.split("@")[0]).replaceAll(".", "")}' class='border' style='page-break-after: always; position:relative; width: ${_width}px; width0: calc(3627px / 3); height: ${_height}px; height0: calc(2600px / 3);'>
-                    <img src='certificate robotics hands on session-01.png' style='width: 100%' />
+                    <img src='certificate quiz-01.png' style='width: 100%' />
                     <div class='name'>${(data[i]['Name']).toLocaleLowerCase().split(" ").map((a)=>`${capitalizeFirstLetter(a)}`).join(" ")}</div>
-
+                    <div class='position'>${position_intpart}<sup>${position_postfix}</sup></div>
                     <div class='watermark'>Developed by TDS</div>
                 </div>
             `;
@@ -334,7 +199,7 @@ error_reporting(E_ALL);
                 await sendEmail(img, aData['Email'], aData['Name']);
             }
 
-            doc.save("41-certificates-for-winterfest-robotics.pdf");
+            doc.save("41-certificates-for-winterfest-quiz.pdf");
         }
 
         function base64toBlob(base64Data, contentType) {
@@ -369,8 +234,8 @@ error_reporting(E_ALL);
             var formData = new FormData();
             formData.append('email', email, );
             formData.append('name', name, );
-            formData.append('subject', "Certificate of Participation | CSE Winter Fest 2023 (Robotics)", );
-            formData.append('message', `Dear ${name},\nWe appreciate your contribution to the program. Please check your certificate.\nThanks.`, );
+            formData.append('subject', "Certificate of Achievement | CSE Winter Fest 2023 (Quiz)", );
+            formData.append('message', `Dear ${name},\nCongratulation on your achievement in CSE Winter Fest 2023 (Quiz). Please check your certificate.\nThanks.`, );
             formData.append('attachment', blob);
 
             return new Promise((res, rej) => {
