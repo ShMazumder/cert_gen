@@ -105,10 +105,12 @@ error_reporting(E_ALL);
         const check_data = [{
                 "Name": "Shazzad Hossain Mazumder",
                 "Email": 'shmazumder23@gmail.com',
+                "Position": "10000th"
             },
             {
                 "Name": "Abdur Rahman Riad",
                 "Email": 'rahmanriad.cse@gmail.com',
+                "Position": "1st"
             }
         ]
 
