@@ -119,7 +119,9 @@ error_reporting(E_ALL);
 
         $(document).ready(function() {
             
-            $([...data, ...check_data]).each(function(i, elm) {
+            let process = [...data, ...check_data];
+            console.log(process);
+            $(process).each(function(i, elm) {
                 // let i = 0;
 
                 let position = (data[i]['Position']);
