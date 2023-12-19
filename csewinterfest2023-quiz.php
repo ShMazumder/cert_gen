@@ -113,28 +113,30 @@ error_reporting(E_ALL);
                 "Email": 'shmazumder23@gmail.com',
                 "Position": "10000th"
             }
-        ]
+        ];
+
+        let process = [...data, ...check_data];
+
 
         let _width = 3627 / 3;
         let _height = 2600 / 3;
 
         $(document).ready(function() {
             
-            let process = [...data, ...check_data];
             console.log(process);
             $(process).each(function(i, elm) {
                 // let i = 0;
 
-                let position = (data[i]['Position']);
+                let position = (elm[i]['Position']);
                 let position_intpart = parseInt(position);
                 let position_postfix = (position).replace(position_intpart, "");
 
-                let email = (data[i]['Email']);
+                let email = (elm[i]['Email']);
 
 
                 var img = `<div id='id_${(email.split("@")[0]).replaceAll(".", "")}' class='border' style='page-break-after: always; position:relative; width: ${_width}px; width0: calc(3627px / 3); height: ${_height}px; height0: calc(2600px / 3);'>
                     <img src='certificate quiz-01.png' style='width: 100%' />
-                    <div class='name'>${(data[i]['Name']).toLocaleLowerCase().split(" ").map((a)=>`${capitalizeFirstLetter(a)}`).join(" ")}</div>
+                    <div class='name'>${(elm[i]['Name']).toLocaleLowerCase().split(" ").map((a)=>`${capitalizeFirstLetter(a)}`).join(" ")}</div>
                     <div class='position'>${position_intpart}<sup>${position_postfix}</sup></div>
                     <div class='watermark'>Developed by TDS</div>
                 </div>
@@ -205,7 +207,7 @@ error_reporting(E_ALL);
                 console.log("processing complete=>", stdid);
 
 
-                var aData = data[index];
+                var aData = process[index];
                 await sendEmail(img, aData['Email'], aData['Name']);
             }
 
