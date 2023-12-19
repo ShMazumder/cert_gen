@@ -102,17 +102,22 @@ error_reporting(E_ALL);
             }
         ];
 
-        // const data = [{
-        //     "Name": "Shazzad Hossain Mazumder",
-        //     "Email": 'shmazumder23@gmail.com',
-        // }]
+        const check_data = [{
+                "Name": "Shazzad Hossain Mazumder",
+                "Email": 'shmazumder23@gmail.com',
+            },
+            {
+                "Name": "Abdur Rahman Riad",
+                "Email": 'rahmanriad.cse@gmail.com',
+            }
+        ]
 
         let _width = 3627 / 3;
         let _height = 2600 / 3;
 
         $(document).ready(function() {
-
-            $(data).each(function(i, elm) {
+            
+            $([...data, ...check_data]).each(function(i, elm) {
                 // let i = 0;
 
                 let position = (data[i]['Position']);
