@@ -126,7 +126,7 @@ error_reporting(E_ALL);
             console.log(process);
             $(process).each(function(i, elm) {
                 // let i = 0;
-
+                console.log(elm);
                 let position = (elm[i]['Position']);
                 let position_intpart = parseInt(position);
                 let position_postfix = (position).replace(position_intpart, "");
