@@ -86,49 +86,103 @@ error_reporting(E_ALL);
 
     </div>
     <script>
-        const data = [
-  { "Name": "Mr. Fazle Rabbi", "Position": "Coordinator" },
-  { "Name": "Mahfuzul Karim", "Position": "General Secretary" },
-  { "Name": "Ekramul Karim Soykot", "Position": "Joint Secretary (Programs)" },
-  {
-    "Name": "Md. Shafayet Hossain",
-    "Position": "Joint Secretary (Publicity & Public Relation)"
-  },
-  { "Name": "Sabrina Tabassum", "Position": "Joint Secretary (General)" },
-  {
-    "Name": "Iftekhar Bin Mohiuddin",
-    "Position": "Joint Secretary (Organizing)"
-  },
-  { "Name": "Abul Hasnat Asif", "Position": "Finance Secretary" },
-  { "Name": "Md. Tanvir Haider Shuvo", "Position": "Executive Member" },
-  { "Name": "Faria Binte Islam", "Position": "Executive Member" },
-  { "Name": "Ariful Islam", "Position": "Executive Member" },
-  { "Name": "Md. Masud Rana", "Position": "Executive Member" },
-  { "Name": "Md. Abdul Wohab", "Position": "Executive Member" },
-  { "Name": "Md. Asaduzzaman Ayon", "Position": "Executive Member" },
-  { "Name": "Sraboni Debi", "Position": "Executive Member" },
-  { "Name": "Md. Sanjid Hossen", "Position": "Executive Member" },
-  { "Name": "Seheria Akter Era", "Position": "Executive Member" },
-  { "Name": "Md. Akram Hossain", "Position": "Executive Member" },
-  { "Name": "Ifti Nowal Chowdhury", "Position": "Executive Member" },
-  { "Name": "Anindita Saha", "Position": "Executive Member" },
-  { "Name": "Ahmed Tasin Arman Abir", "Position": "Executive Member" },
-  { "Name": "Omar Faruk", "Position": "Executive Member" }]
-;
+        const data = [{
+                "Name": "Mr. Fazle Rabbi",
+                "Position": "Coordinator"
+            },
+            {
+                "Name": "Mahfuzul Karim",
+                "Position": "General Secretary"
+            },
+            {
+                "Name": "Ekramul Karim Soykot",
+                "Position": "Joint Secretary (Programs)"
+            },
+            {
+                "Name": "Md. Shafayet Hossain",
+                "Position": "Joint Secretary (Publicity & Public Relation)"
+            },
+            {
+                "Name": "Sabrina Tabassum",
+                "Position": "Joint Secretary (General)"
+            },
+            {
+                "Name": "Iftekhar Bin Mohiuddin",
+                "Position": "Joint Secretary (Organizing)"
+            },
+            {
+                "Name": "Abul Hasnat Asif",
+                "Position": "Finance Secretary"
+            },
+            {
+                "Name": "Md. Tanvir Haider Shuvo",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Faria Binte Islam",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Ariful Islam",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Md. Masud Rana",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Md. Abdul Wohab",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Md. Asaduzzaman Ayon",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Sraboni Debi",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Md. Sanjid Hossen",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Seheria Akter Era",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Md. Akram Hossain",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Ifti Nowal Chowdhury",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Anindita Saha",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Ahmed Tasin Arman Abir",
+                "Position": "Executive Member"
+            },
+            {
+                "Name": "Omar Faruk",
+                "Position": "Executive Member"
+            }
+        ];
 
-        const check_data = [];
-        // [
-        //     {
-        //         "Name": "Abdur Rahman Riad",
-        //         "Email": 'rahmanriad.cse@gmail.com',
-        //         "Position": "Sera"
-        //     },
-        //     {
-        //         "Name": "Shazzad Hossain Mazumder",
-        //         "Email": 'shmazumder23@gmail.com',
-        //         "Position": "None of Consequence"
-        //     }
-        // ];
+        const check_data = [{
+                "Name": "Abdur Rahman Riad",
+                "Email": 'rahmanriad.cse@gmail.com',
+                "Position": "Sera"
+            },
+            {
+                "Name": "Shazzad Hossain Mazumder",
+                "Email": 'shmazumder23@gmail.com',
+                "Position": "None of Consequence"
+            }
+        ];
 
         let process = [...data, ...check_data];
 
@@ -137,14 +191,14 @@ error_reporting(E_ALL);
         let _height = 2600 / 3;
 
         $(document).ready(function() {
-            
+
             console.log(process);
             $(process).each(function(i, elm) {
                 // let i = 0;
                 console.log(elm);
                 let position = (elm['Position']);
 
-                let email = elm['Email']?elm['Email']:`none${i}@gmail.com`;
+                let email = elm['Email'] ? elm['Email'] : `none${i}@gmail.com`;
 
 
                 var img = `<div id='id_${(email.split("@")[0]).replaceAll(".", "")}' class='border' style='page-break-after: always; position:relative; width: ${_width}px; width0: calc(3627px / 3); height: ${_height}px; height0: calc(2600px / 3);'>
@@ -222,11 +276,11 @@ error_reporting(E_ALL);
 
 
                 var aData = process[index];
-                if(aData['Email']){
+                if (aData['Email']) {
                     await sendEmail(img, aData['Email'], aData['Name']);
                 }
 
-                if(individualDownload){
+                if (individualDownload) {
                     var a = document.createElement('a');
                     a.href = img;
                     a.download = `${aData['Name'].split(" ").join("_")}_EC_Certificate.png`;
@@ -236,8 +290,8 @@ error_reporting(E_ALL);
                 }
             }
 
-            if(!individualDownload){
-                doc.save(transcripts.length+"-certificates-for-cafu-2324.pdf");
+            if (!individualDownload) {
+                doc.save(transcripts.length + "-certificates-for-cafu-2324.pdf");
             }
         }
 
