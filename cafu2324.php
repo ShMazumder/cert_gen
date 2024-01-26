@@ -86,101 +86,108 @@ error_reporting(E_ALL);
 
     </div>
     <script>
-        const data = [{
-                "Name": "Mr. Fazle Rabbi",
-                "Position": "Coordinator"
-            },
-            {
-                "Name": "Mahfuzul Karim",
-                "Position": "General Secretary"
-            },
-            {
-                "Name": "Ekramul Karim Soykot",
-                "Position": "Joint Secretary (Programs)"
-            },
-            {
-                "Name": "Md. Shafayet Hossain",
-                "Position": "Joint Secretary (Publicity & Public Relation)"
-            },
-            {
-                "Name": "Sabrina Tabassum",
-                "Position": "Joint Secretary (General)"
-            },
-            {
-                "Name": "Iftekhar Bin Mohiuddin",
-                "Position": "Joint Secretary (Organizing)"
-            },
-            {
-                "Name": "Abul Hasnat Asif",
-                "Position": "Finance Secretary"
-            },
-            {
-                "Name": "Md. Tanvir Haider Shuvo",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Faria Binte Islam",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Ariful Islam",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Md. Masud Rana",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Md. Abdul Wohab",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Md. Asaduzzaman Ayon",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Sraboni Debi",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Md. Sanjid Hossen",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Seheria Akter Era",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Md. Akram Hossain",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Ifti Nowal Chowdhury",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Anindita Saha",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Ahmed Tasin Arman Abir",
-                "Position": "Executive Member"
-            },
-            {
-                "Name": "Omar Faruk",
-                "Position": "Executive Member"
-            }
-        ];
+        const data = [];
+        // [{
+        //         "Name": "Mr. Fazle Rabbi",
+        //         "Position": "Coordinator"
+        //     },
+        //     {
+        //         "Name": "Mahfuzul Karim",
+        //         "Position": "General Secretary"
+        //     },
+        //     {
+        //         "Name": "Ekramul Karim Soykot",
+        //         "Position": "Joint Secretary (Programs)"
+        //     },
+        //     {
+        //         "Name": "Md. Shafayet Hossain",
+        //         "Position": "Joint Secretary (Publicity & Public Relation)"
+        //     },
+        //     {
+        //         "Name": "Sabrina Tabassum",
+        //         "Position": "Joint Secretary (General)"
+        //     },
+        //     {
+        //         "Name": "Iftekhar Bin Mohiuddin",
+        //         "Position": "Joint Secretary (Organizing)"
+        //     },
+        //     {
+        //         "Name": "Abul Hasnat Asif",
+        //         "Position": "Finance Secretary"
+        //     },
+        //     {
+        //         "Name": "Md. Tanvir Haider Shuvo",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Faria Binte Islam",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Ariful Islam",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Md. Masud Rana",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Md. Abdul Wohab",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Md. Asaduzzaman Ayon",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Sraboni Debi",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Md. Sanjid Hossen",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Seheria Akter Era",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Md. Akram Hossain",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Ifti Nowal Chowdhury",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Anindita Saha",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Ahmed Tasin Arman Abir",
+        //         "Position": "Executive Member"
+        //     },
+        //     {
+        //         "Name": "Omar Faruk",
+        //         "Position": "Executive Member"
+        //     }
+        // ];
 
-        const check_data = [{
-                "Name": "Abdur Rahman Riad",
-                "Email": 'rahmanriad.cse@gmail.com',
-                "Position": "Sera"
-            },
+        const check_data = [
+            // {
+            //     "Name": "Abdur Rahman Riad",
+            //     "Email": 'rahmanriad.cse@gmail.com',
+            //     "Position": "Sera"
+            // },
+            // {
+            //     "Name": "Shazzad Hossain Mazumder",
+            //     "Email": 'shmazumder23@gmail.com',
+            //     "Position": "None of Consequence"
+            // },
             {
-                "Name": "Shazzad Hossain Mazumder",
-                "Email": 'shmazumder23@gmail.com',
-                "Position": "None of Consequence"
+                "Name": "Joydeb Chondra Nath",
+                // "Email": 'shmazumder23@gmail.com',
+                "Position": "Shera MLSS"
             }
         ];
 
