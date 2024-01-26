@@ -16,6 +16,8 @@
     <div><a href="csewinterfest2023-quiz.php">CSE Winter Fest 2023 (Quiz)</a></div>
 
     <div><a href="cafu2324.php">CAFU 2023-2024</a></div>
+
+    <div><a href="cafu2324-appreciation.php">CAFU Appreciation 2023-2024</a></div>
 </body>
 
 </html>

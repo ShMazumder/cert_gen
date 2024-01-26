@@ -20,13 +20,13 @@ error_reporting(E_ALL);
     <style>
         .name {
             position: absolute;
-            top: 405px;
+            top: 335px;
             text-align: center;
             width: calc(3627px / 3);
-            font-size: 56px;
+            font-size: 60px;
             font-weight: bold;
             font-family: 'Beau Rivage', cursive;
-            /* font-family: 'Permanent Marker', cursive; */
+            /* font-family: 'Permanent Marker', cursive;*/
         }
 
         /* .name div{
@@ -86,39 +86,60 @@ error_reporting(E_ALL);
 
     </div>
     <script>
-        const data = [
-  { "Name": "Mr. Fazle Rabbi", "Position": "Coordinator" },
-  { "Name": "Mahfuzul Karim", "Position": "General Secretary" },
-  { "Name": "Ekramul Karim Soykot", "Position": "Joint Secretary (Programs)" },
-  {
-    "Name": "Md. Shafayet Hossain",
-    "Position": "Joint Secretary (Publicity & Public Relation)"
-  },
-  { "Name": "Sabrina Tabassum", "Position": "Joint Secretary (General)" },
-  {
-    "Name": "Iftekhar Bin Mohiuddin",
-    "Position": "Joint Secretary (Organizing)"
-  },
-  { "Name": "Abul Hasnat Asif", "Position": "Finance Secretary" },
-  { "Name": "Md. Tanvir Haider Shuvo", "Position": "Executive Member" },
-  { "Name": "Faria Binte Islam", "Position": "Executive Member" },
-  { "Name": "Ariful Islam", "Position": "Executive Member" },
-  { "Name": "Md. Masud Rana", "Position": "Executive Member" },
-  { "Name": "Md. Abdul Wohab", "Position": "Executive Member" },
-  { "Name": "Md. Asaduzzaman Ayon", "Position": "Executive Member" },
-  { "Name": "Sraboni Debi", "Position": "Executive Member" },
-  { "Name": "Md. Sanjid Hossen", "Position": "Executive Member" },
-  { "Name": "Seheria Akter Era", "Position": "Executive Member" },
-  { "Name": "Md. Akram Hossain", "Position": "Executive Member" },
-  { "Name": "Ifti Nowal Chowdhury", "Position": "Executive Member" },
-  { "Name": "Anindita Saha", "Position": "Executive Member" },
-  { "Name": "Ahmed Tasin Arman Abir", "Position": "Executive Member" },
-  { "Name": "Omar Faruk", "Position": "Executive Member" }]
-;
+        const data = [{
+            "Name": "FARIA AFRIN"
+        }, {
+            "Name": "MD. MAJADUL ISLAM"
+        }, {
+            "Name": "IFTEKHAR BIN MOHIUDDIN"
+        }, {
+            "Name": "FAHMID BIN MOSARAF"
+        }, {
+            "Name": "KAZI TANVIR HOSSAIN"
+        }, {
+            "Name": "MD. SANJID HOSSEN"
+        }, {
+            "Name": "MD KAWSAR MAHMUD"
+        }, {
+            "Name": "MD. RASHEDUL HOQUE SIFAT"
+        }, {
+            "Name": "IFTI NOWAL CHOWDHURY"
+        }, {
+            "Name": "SHEIKH AHAMED"
+        }, {
+            "Name": "AKSA MAHMUD"
+        }, {
+            "Name": "MOHAMMAD SHAHARIAR HOSSAIN"
+        }, {
+            "Name": "MAHMUDUL HASAN"
+        }, {
+            "Name": "TASMIMA TABASSUM SHAZIN"
+        }, {
+            "Name": "OMAR FARUK"
+        }, {
+            "Name": "MOMTAJ AKTER"
+        }, {
+            "Name": "ABUL HASNAT ASIF"
+        }, {
+            "Name": "EKRAMUL KARIM SOYKOT"
+        }, {
+            "Name": "DURJOY DATTA"
+        }, {
+            "Name": "MD. SAIDUR RAHMAN"
+        }, {
+            "Name": "SABRINA TABASSUM"
+        }, {
+            "Name": "Safayet Hossen Ohi"
+        }, {
+            "Name": "Mahfuzul Karim"
+        }, {
+            "Name": "Towhid Al Rabe"
+        }, {
+            "Name": "Md. Akram Hossain"
+        }];
 
         const check_data = [];
-        // [
-        //     {
+        // [{
         //         "Name": "Abdur Rahman Riad",
         //         "Email": 'rahmanriad.cse@gmail.com',
         //         "Position": "Sera"
@@ -137,18 +158,18 @@ error_reporting(E_ALL);
         let _height = 2600 / 3;
 
         $(document).ready(function() {
-            
+
             console.log(process);
             $(process).each(function(i, elm) {
                 // let i = 0;
                 console.log(elm);
-                let position = (elm['Position']);
+                let position = (elm['Position'] || "");
 
-                let email = elm['Email']?elm['Email']:`none${i}@gmail.com`;
+                let email = elm['Email'] ? elm['Email'] : `none${i}@gmail.com`;
 
 
                 var img = `<div id='id_${(email.split("@")[0]).replaceAll(".", "")}' class='border' style='page-break-after: always; position:relative; width: ${_width}px; width0: calc(3627px / 3); height: ${_height}px; height0: calc(2600px / 3);'>
-                    <img src='CAFU 2023-2024/Cerificate Design CAFU.jpeg' style='width: 100%' />
+                    <img src='CAFU 2023-2024/Volunteer Certificate.jpeg' style='width: 100%' />
                     <div class='name'>${(elm['Name']).toLocaleLowerCase().split(" ").map((a)=>`${capitalizeFirstLetter(a)}`).join(" ")}</div>
                     <div class='position'>${position}</div>
                     <div class='watermark'>Developed by TDS</div>
@@ -180,7 +201,6 @@ error_reporting(E_ALL);
         );
 
         const individualDownload = true;
-
         async function downloadTranscripts() {
             var doc = new jspdf.jsPDF({
                 orientation: "l",
@@ -222,14 +242,14 @@ error_reporting(E_ALL);
 
 
                 var aData = process[index];
-                if(aData['Email']){
+                if (aData['Email']) {
                     await sendEmail(img, aData['Email'], aData['Name']);
                 }
 
                 if(individualDownload){
                     var a = document.createElement('a');
                     a.href = img;
-                    a.download = `${aData['Name'].split(" ").join("_")}_EC_Certificate.png`;
+                    a.download = `${aData['Name'].split(" ").join("_")}_Appreciation_Certificate.png`;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
@@ -237,7 +257,7 @@ error_reporting(E_ALL);
             }
 
             if(!individualDownload){
-                doc.save(transcripts.length+"-certificates-for-cafu-2324.pdf");
+                doc.save(transcripts.length + "-certificates-for-cafu-2324.pdf");
             }
         }
 
