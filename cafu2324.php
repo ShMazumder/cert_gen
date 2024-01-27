@@ -86,109 +86,103 @@ error_reporting(E_ALL);
 
     </div>
     <script>
-        const data = [];
-        // [{
-        //         "Name": "Mr. Fazle Rabbi",
-        //         "Position": "Coordinator"
-        //     },
-        //     {
-        //         "Name": "Mahfuzul Karim",
-        //         "Position": "General Secretary"
-        //     },
-        //     {
-        //         "Name": "Ekramul Karim Soykot",
-        //         "Position": "Joint Secretary (Programs)"
-        //     },
-        //     {
-        //         "Name": "Md. Shafayet Hossain",
-        //         "Position": "Joint Secretary (Publicity & Public Relation)"
-        //     },
-        //     {
-        //         "Name": "Sabrina Tabassum",
-        //         "Position": "Joint Secretary (General)"
-        //     },
-        //     {
-        //         "Name": "Iftekhar Bin Mohiuddin",
-        //         "Position": "Joint Secretary (Organizing)"
-        //     },
-        //     {
-        //         "Name": "Abul Hasnat Asif",
-        //         "Position": "Finance Secretary"
-        //     },
-        //     {
-        //         "Name": "Md. Tanvir Haider Shuvo",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Faria Binte Islam",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Ariful Islam",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Md. Masud Rana",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Md. Abdul Wohab",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Md. Asaduzzaman Ayon",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Sraboni Debi",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Md. Sanjid Hossen",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Seheria Akter Era",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Md. Akram Hossain",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Ifti Nowal Chowdhury",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Anindita Saha",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Ahmed Tasin Arman Abir",
-        //         "Position": "Executive Member"
-        //     },
-        //     {
-        //         "Name": "Omar Faruk",
-        //         "Position": "Executive Member"
-        //     }
-        // ];
+        const data = [{
+            "Name": "Mr. Fazle Rabbi",
+            "Position": "Coordinator",
+            "Email": "fazlerabbi@feniuniversity.edu.bd"
+        }, {
+            "Name": "Mahfuzul Karim",
+            "Position": "General Secretary",
+            "Email": "mahfuzul.karim99@gmail.com"
+        }, {
+            "Name": "Ekramul Karim Soykot",
+            "Position": "Joint Secretary (Programs)",
+            "Email": "ekramrock94@gmail.com"
+        }, {
+            "Name": "Md. Shafayet Hossain",
+            "Position": "Joint Secretary (Publicity & Public Relation)",
+            "Email": "shafayet19ohi@gmail.com"
+        }, {
+            "Name": "Sabrina Tabassum",
+            "Position": "Joint Secretary (General)",
+            "Email": "tabassumsabrina1@gmail.com"
+        }, {
+            "Name": "Iftekhar Bin Mohiuddin",
+            "Position": "Joint Secretary (Organizing)",
+            "Email": "iftekharbinmohiuddin@gmail.com"
+        }, {
+            "Name": "Abul Hasnat Asif",
+            "Position": "Finance Secretary",
+            "Email": "md2010883@gmail.com"
+        }, {
+            "Name": "Md. Tanvir Haider Shuvo",
+            "Position": "Executive Member",
+            "Email": "mtanvirshuvi00@gmail.com"
+        }, {
+            "Name": "Faria Binte Islam",
+            "Position": "Executive Member",
+            "Email": "fariatasbin165@gmail.com"
+        }, {
+            "Name": "Ariful Islam",
+            "Position": "Executive Member",
+            "Email": "arifulfeni92@gmail.com"
+        }, {
+            "Name": "Md. Masud Rana",
+            "Position": "Executive Member",
+            "Email": "promasudrana@gmail.com"
+        }, {
+            "Name": "Md. Abdul Wohab",
+            "Position": "Executive Member",
+            "Email": "mdwohab121@gmail.com"
+        }, {
+            "Name": "Md. Asaduzzaman Ayon",
+            "Position": "Executive Member",
+            "Email": "azayon24@gmail.com"
+        }, {
+            "Name": "Sraboni Debi",
+            "Position": "Executive Member",
+            "Email": "srabonidebi92@gmail.com"
+        }, {
+            "Name": "Md. Sanjid Hossen",
+            "Position": "Executive Member",
+            "Email": "sniloy101@gmail.com"
+        }, {
+            "Name": "Seheria Akter Era",
+            "Position": "Executive Member",
+            "Email": "era.chowdhury3921@gmail.com"
+        }, {
+            "Name": "Md. Akram Hossain",
+            "Position": "Executive Member",
+            "Email": "akramanam09@gmail.com"
+        }, {
+            "Name": "Ifti Nowal Chowdhury",
+            "Position": "Executive Member",
+            "Email": "faiazmd809@gmail.com"
+        }, {
+            "Name": "Anindita Saha",
+            "Position": "Executive Member",
+            "Email": "rahulinforu08@gmail.com"
+        }, {
+            "Name": "Ahmed Tasin Arman Abir",
+            "Position": "Executive Member",
+            "Email": "armanabir0124@gmail.com"
+        }, {
+            "Name": "Omar Faruk",
+            "Position": "Executive Member",
+            "Email": "omarfaruk01705@gmail.com"
+        }];
 
-        const check_data = [
-            // {
-            //     "Name": "Abdur Rahman Riad",
-            //     "Email": 'rahmanriad.cse@gmail.com',
-            //     "Position": "Sera"
-            // },
-            // {
-            //     "Name": "Shazzad Hossain Mazumder",
-            //     "Email": 'shmazumder23@gmail.com',
-            //     "Position": "None of Consequence"
-            // },
+        const check_data = [{
+                "Name": "Abdur Rahman Riad",
+                "Email": 'rahmanriad.cse@gmail.com',
+                "Position": "Sera"
+            },
             {
-                "Name": "Joydeb Chondra Nath",
-                // "Email": 'shmazumder23@gmail.com',
-                "Position": "Shera MLSS"
-            }
+                "Name": "Shazzad Hossain Mazumder",
+                "Email": 'shmazumder23@gmail.com',
+                "Position": "None of Consequence"
+            },
+
         ];
 
         let process = [...data, ...check_data];
@@ -240,7 +234,7 @@ error_reporting(E_ALL);
             "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         );
 
-        const individualDownload = true;
+        const individualDownload = false;
 
         async function downloadTranscripts() {
             var doc = new jspdf.jsPDF({

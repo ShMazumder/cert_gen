@@ -87,69 +87,93 @@ error_reporting(E_ALL);
     </div>
     <script>
         const data = [{
-            "Name": "FARIA AFRIN"
+            "Name": "FARIA AFRIN",
+            "Email": "fariaisha27@gmail.com"
         }, {
-            "Name": "MD. MAJADUL ISLAM"
+            "Name": "MD. MAJADUL ISLAM",
+            "Email": "majadulislam3012@gmail.com"
         }, {
-            "Name": "IFTEKHAR BIN MOHIUDDIN"
+            "Name": "IFTEKHAR BIN MOHIUDDIN",
+            "Email": "iftekharbinmohiuddin@gmail.com"
         }, {
-            "Name": "FAHMID BIN MOSARAF"
+            "Name": "FAHMID BIN MOSARAF",
+            "Email": "fahmidfamel396@gmail.com"
         }, {
-            "Name": "KAZI TANVIR HOSSAIN"
+            "Name": "KAZI TANVIR HOSSAIN",
+            "Email": "ahnafraj445@gmail.com"
         }, {
-            "Name": "MD. SANJID HOSSEN"
+            "Name": "MD. SANJID HOSSEN",
+            "Email": "sniloy101@gmail.com"
         }, {
-            "Name": "MD KAWSAR MAHMUD"
+            "Name": "MD KAWSAR MAHMUD",
+            "Email": "kawsarmahmud822@gmail.com"
         }, {
-            "Name": "MD. RASHEDUL HOQUE SIFAT"
+            "Name": "MD. RASHEDUL HOQUE SIFAT",
+            "Email": "rashedulhaquesifat@gmail.com"
         }, {
-            "Name": "IFTI NOWAL CHOWDHURY"
+            "Name": "IFTI NOWAL CHOWDHURY",
+            "Email": "faiazmd809@gmail.com"
         }, {
-            "Name": "SHEIKH AHAMED"
+            "Name": "SHEIKH AHAMED",
+            "Email": "shezan0104@gmail.com"
         }, {
-            "Name": "AKSA MAHMUD"
+            "Name": "AKSA MAHMUD",
+            "Email": "aksamahmud7822@gmail.com"
         }, {
-            "Name": "MOHAMMAD SHAHARIAR HOSSAIN"
+            "Name": "MOHAMMAD SHAHARIAR HOSSAIN",
+            "Email": "shtttanim92@gmail.com"
         }, {
-            "Name": "MAHMUDUL HASAN"
+            "Name": "MAHMUDUL HASAN",
+            "Email": "mhshibli017@gmail.com"
         }, {
-            "Name": "TASMIMA TABASSUM SHAZIN"
+            "Name": "TASMIMA TABASSUM SHAZIN",
+            "Email": "sejintabassum@gmail.com"
         }, {
-            "Name": "OMAR FARUK"
+            "Name": "OMAR FARUK",
+            "Email": "omarfaruk01705@gmail.com"
         }, {
-            "Name": "MOMTAJ AKTER"
+            "Name": "MOMTAJ AKTER",
+            "Email": "romanhaydar@gmail.com"
         }, {
-            "Name": "ABUL HASNAT ASIF"
+            "Name": "ABUL HASNAT ASIF",
+            "Email": "md2010883@gmail.com"
         }, {
-            "Name": "EKRAMUL KARIM SOYKOT"
+            "Name": "EKRAMUL KARIM SOYKOT",
+            "Email": "ekramrock94@gmail.com"
         }, {
-            "Name": "DURJOY DATTA"
+            "Name": "DURJOY DATTA",
+            "Email": "durjaydatta5@gmail.com"
         }, {
-            "Name": "MD. SAIDUR RAHMAN"
+            "Name": "MD. SAIDUR RAHMAN",
+            "Email": "saidurrahman4690@gmail.com"
         }, {
-            "Name": "SABRINA TABASSUM"
+            "Name": "SABRINA TABASSUM",
+            "Email": "tabassumsabrina1@gmail.com"
         }, {
-            "Name": "Safayet Hossen Ohi"
+            "Name": "MD. SHAFAYET HOSSAIN",
+            "Email": "shafayet19ohi@gmail.com"
         }, {
-            "Name": "Mahfuzul Karim"
+            "Name": "MAHFUZUL KARIM",
+            "Email": "mahfuzul.karim99@gmail.com"
         }, {
-            "Name": "Towhid Al Rabe"
+            "Name": "MD. AKRAM HOSSAIN",
+            "Email": "akramanam09@gmail.com"
         }, {
-            "Name": "Md. Akram Hossain"
+            "Name": "TOWHID AL RABE",
+            "Email": "alrabitowhid@gmail.com"
         }];
 
-        const check_data = [];
-        // [{
-        //         "Name": "Abdur Rahman Riad",
-        //         "Email": 'rahmanriad.cse@gmail.com',
-        //         "Position": "Sera"
-        //     },
-        //     {
-        //         "Name": "Shazzad Hossain Mazumder",
-        //         "Email": 'shmazumder23@gmail.com',
-        //         "Position": "None of Consequence"
-        //     }
-        // ];
+        const check_data = [{
+                "Name": "Abdur Rahman Riad",
+                "Email": 'rahmanriad.cse@gmail.com',
+                "Position": "Sera"
+            },
+            {
+                "Name": "Shazzad Hossain Mazumder",
+                "Email": 'shmazumder23@gmail.com',
+                "Position": "None of Consequence"
+            }
+        ];
 
         let process = [...data, ...check_data];
 
@@ -200,7 +224,7 @@ error_reporting(E_ALL);
             "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         );
 
-        const individualDownload = true;
+        const individualDownload = false;
         async function downloadTranscripts() {
             var doc = new jspdf.jsPDF({
                 orientation: "l",
@@ -246,7 +270,7 @@ error_reporting(E_ALL);
                     await sendEmail(img, aData['Email'], aData['Name']);
                 }
 
-                if(individualDownload){
+                if (individualDownload) {
                     var a = document.createElement('a');
                     a.href = img;
                     a.download = `${aData['Name'].split(" ").join("_")}_Appreciation_Certificate.png`;
@@ -256,7 +280,7 @@ error_reporting(E_ALL);
                 }
             }
 
-            if(!individualDownload){
+            if (!individualDownload) {
                 doc.save(transcripts.length + "-certificates-for-cafu-2324.pdf");
             }
         }
