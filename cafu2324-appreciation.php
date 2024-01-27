@@ -163,17 +163,18 @@ error_reporting(E_ALL);
             "Email": "alrabitowhid@gmail.com"
         }];
 
-        const check_data = [{
-                "Name": "Abdur Rahman Riad",
-                "Email": 'rahmanriad.cse@gmail.com',
-                "Position": "Sera"
-            },
-            {
-                "Name": "Shazzad Hossain Mazumder",
-                "Email": 'shmazumder23@gmail.com',
-                "Position": "None of Consequence"
-            }
-        ];
+        const check_data = [];
+        // [{
+        //         "Name": "Abdur Rahman Riad",
+        //         "Email": 'rahmanriad.cse@gmail.com',
+        //         "Position": "Sera"
+        //     },
+        //     {
+        //         "Name": "Shazzad Hossain Mazumder",
+        //         "Email": 'shmazumder23@gmail.com',
+        //         "Position": "None of Consequence"
+        //     }
+        // ];
 
         let process = [...data, ...check_data];
 
