@@ -317,8 +317,8 @@ error_reporting(E_ALL);
             var formData = new FormData();
             formData.append('email', email, );
             formData.append('name', name, );
-            formData.append('subject', "Certificate of Achievement | CSE Winter Fest 2023 (Quiz)", );
-            formData.append('message', `Dear ${name},\nCongratulation on your achievement in CSE Winter Fest 2023 (Quiz). Please check your certificate.\nThanks.`, );
+            formData.append('subject', "Certificate of Appreciation | Voluntary 2023", );
+            formData.append('message', `Dear ${name},\nThank you for your voluntary contribution to the Department of CSE, Feni University.\nThanks.`, );
             formData.append('attachment', blob);
 
             return new Promise((res, rej) => {
